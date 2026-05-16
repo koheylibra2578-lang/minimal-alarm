@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alarm</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="clock" id="clock">00:00:00</div>
+
+    <form class="add-form" id="addForm">
+      <input type="time" id="timeInput" required />
+      <input type="text" id="labelInput" placeholder="ラベル（任意）" maxlength="30" />
+      <button type="submit">追加</button>
+    </form>
+
+    <ul class="alarm-list" id="alarmList"></ul>
+  </div>
+
+  <div class="overlay hidden" id="overlay">
+    <div class="modal">
+      <p id="modalLabel">アラーム!</p>
+      <button id="dismissBtn">止める</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
